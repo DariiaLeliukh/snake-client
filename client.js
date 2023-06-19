@@ -7,6 +7,12 @@ const connect = function() {
     port: 50541,
   });
 
+  conn.on("connect", () => {
+    console.log("Game server is connected");
+    conn.write("Name: DAR");
+  });
+
+
   // interpret incoming data as text
   conn.setEncoding("utf8");
 
