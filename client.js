@@ -1,13 +1,15 @@
 const net = require("net");
 const { IP, PORT } = require("./constants");
 
-// establishes a connection with the game server
+
 const connect = function() {
+  // establishes a connection with the game server
   const conn = net.createConnection({
     host: IP,
     port: PORT,
   });
 
+  // event listener on connect
   conn.on("connect", () => {
     console.log("Game server is connected");
     conn.write("Name: DAR");

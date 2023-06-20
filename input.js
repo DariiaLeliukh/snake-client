@@ -15,7 +15,7 @@ const setupInput = function(conn) {
 };
 
 /*
-  Exit the game if the Ctrl+C is pressed
+  Handle different keyboard keys for the game
 */
 const handleUserInput = function(key) {
   // \u0003 maps to ctrl+c input
