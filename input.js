@@ -42,8 +42,16 @@ const handleUserInput = function(key) {
   if (key === 'd') {
     connection.write("Move: right");
   }
+
+  //when k is pressed
+  if (key === 'k') {
+    connection.write("Say: looks like a bad move");
+  }
+
+  //when l is pressed
+  if (key === 'l') {
+    connection.write("Say: l stands for ... loser");
+  }
 };
-
-
 
 module.exports = setupInput;
